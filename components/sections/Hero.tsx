@@ -246,23 +246,28 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Side - Profile Photo */}
+          {/* Right Side - Profile Photo (transparent cutout, blends with both themes) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0.2 }}
-            className="w-full max-w-[18rem] sm:max-w-xs lg:w-[22rem] xl:w-[26rem] lg:max-w-none mx-auto lg:mx-0 mt-8 lg:mt-0 shrink-0"
+            className="w-full max-w-[19rem] sm:max-w-sm lg:w-[27rem] xl:w-[32rem] lg:max-w-none mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0 shrink-0"
           >
-            <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_60px_rgba(168,85,247,0.35)] bg-black">
-              <Image
-                src="/kunal-photo.webp"
-                alt="Kunalsinh Chavda, SEO Engineer"
-                width={520}
-                height={520}
-                priority
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+            <div className="relative">
+            <div className="absolute inset-x-6 top-10 bottom-0 rounded-full bg-gradient-to-br from-purple-500/25 to-blue-500/25 blur-3xl pointer-events-none"></div>
+            <Image
+              src="/kunal-cutout.webp"
+              alt="Kunalsinh Chavda, SEO Engineer"
+              width={900}
+              height={1108}
+              priority
+              className="relative w-full h-auto"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, #000 82%, transparent 100%)",
+                maskImage: "linear-gradient(to bottom, #000 82%, transparent 100%)",
+              }}
+            />
             </div>
           </motion.div>
         </div>
