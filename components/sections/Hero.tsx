@@ -251,7 +251,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0.2 }}
-            className="w-full max-w-[19rem] sm:max-w-sm lg:w-[27rem] xl:w-[32rem] lg:max-w-none mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0 shrink-0"
+            className="w-full max-w-[19rem] sm:max-w-sm lg:w-[21rem] xl:w-[24rem] 2xl:w-[26rem] lg:max-w-none mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0 shrink-0"
           >
             <div className="relative">
             <div className="absolute inset-x-6 top-10 bottom-0 rounded-full bg-gradient-to-br from-purple-500/25 to-blue-500/25 blur-3xl pointer-events-none"></div>
