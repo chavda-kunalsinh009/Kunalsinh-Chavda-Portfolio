@@ -8,6 +8,12 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
+
+const WHATSAPP_NUMBER = "919586960610";
+const WHATSAPP_MESSAGE =
+  "Hi Kunalsinh, I found your portfolio and I'm interested in your SEO services. Can we talk?";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const contactInfo = [
   {
@@ -16,6 +22,14 @@ const contactInfo = [
     value: "kunalsinhchavda2001@gmail.com",
     link: "mailto:kunalsinhchavda2001@gmail.com",
     color: "from-purple-500 to-blue-500",
+  },
+  {
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+    value: "Chat with me on WhatsApp",
+    link: WHATSAPP_LINK,
+    color: "from-green-500 to-emerald-600",
+    external: true,
   },
   {
     icon: Phone,
@@ -39,6 +53,12 @@ const socialLinks = [
     icon: Linkedin,
     href: "https://www.linkedin.com/in/kunalsinh-chavda-3a567b250/",
     color: "from-blue-500 to-blue-600",
+  },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    href: WHATSAPP_LINK,
+    color: "from-green-500 to-emerald-600",
   },
   {
     name: "Instagram",
@@ -119,6 +139,23 @@ export default function Contact() {
           </p>
         </motion.div>
 
+        {/* WhatsApp CTA */}
+        <div className="max-w-3xl mx-auto mb-8 text-center">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#ffffff", backgroundColor: "#25D366" }}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_30px_rgba(37,211,102,0.35)] hover:shadow-[0_0_40px_rgba(37,211,102,0.55)] hover:-translate-y-1 transition-all duration-300"
+          >
+            <FaWhatsapp className="w-7 h-7" style={{ color: "#ffffff" }} />
+            <span style={{ color: "#ffffff" }}>Chat on WhatsApp</span>
+          </a>
+          <p className="text-white/60 text-sm mt-3">
+            Interested in working together? Message me directly on WhatsApp to discuss your project.
+          </p>
+        </div>
+
         {/* Main Content */}
         <div className="max-w-3xl mx-auto">
           {/* Contact Info */}
@@ -142,6 +179,9 @@ export default function Contact() {
                 >
                   <a
                     href={info.link}
+                    {...("external" in info && info.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                     className="block bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-200 group"
                   >
                     <div className="flex items-start gap-4">
