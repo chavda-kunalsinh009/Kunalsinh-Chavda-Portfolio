@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kunalsinh Chavada" }],
   icons: {
-    icon: "/images/kunal-avatar.webp",
-    shortcut: "/kunal-avatar.webp",
-    apple: "/kunal-avatar.webp",
+    icon: "/kunal-photo.webp",
+    shortcut: "/kunal-photo.webp",
+    apple: "/kunal-photo.webp",
   },
   openGraph: {
     title: "Kunalsinh Chavda | SEO Engineer",

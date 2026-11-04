@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Code,
   Palette,
@@ -137,9 +138,20 @@ export default function About() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-blue-500/10 opacity-50 blur-xl"></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                  Who I Am
-                </h3>
+                <div className="flex items-center gap-5 mb-6">
+                  <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-xl">
+                    <Image
+                      src="/kunal-photo.webp"
+                      alt="Kunalsinh Chavda, SEO Engineer"
+                      width={288}
+                      height={288}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    Who I Am
+                  </h3>
+                </div>
                 <div className="space-y-4 text-white/80 leading-relaxed">
                   <p>
                     I'm an experienced SEO Engineer with 2 years of proven expertise in driving organic growth and increasing online visibility. I combine technical SEO knowledge with strategic optimization, along with <b>AI-driven SEO</b>, <b>AEO (Answer Engine Optimization)</b>, and <b>GEO (Generative Engine Optimization)</b> strategies to help businesses achieve higher search rankings and increased qualified traffic.

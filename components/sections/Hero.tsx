@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
@@ -245,70 +246,24 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Side - Stats Row (Desktop Only) */}
+          {/* Right Side - Profile Photo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0.2 }}
-            className="hidden lg:flex lg:w-auto lg:flex-col gap-8"
+            className="w-full max-w-[18rem] sm:max-w-xs lg:w-[22rem] xl:w-[26rem] lg:max-w-none mx-auto lg:mx-0 mt-8 lg:mt-0 shrink-0"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              className="text-right"
-            >
-              <div
-                className="text-6xl xl:text-7xl font-black text-white mb-2"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(168,85,247,0.6), 0 0 40px rgba(168,85,247,0.3)",
-                }}
-              >
-                25+
-              </div>
-              <div className="text-white/70 text-base uppercase tracking-wider">
-                Websites Optimized
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.6 }}
-              className="text-right"
-            >
-              <div
-                className="text-6xl xl:text-7xl font-black text-white mb-2"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(59,130,246,0.6), 0 0 40px rgba(59,130,246,0.3)",
-                }}
-              >
-                20+
-              </div>
-              <div className="text-white/70 text-base uppercase tracking-wider">
-                Happy Clients
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.7 }}
-              className="text-right"
-            >
-              <div
-                className="text-6xl xl:text-7xl font-black text-white mb-2"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(168,85,247,0.6), 0 0 40px rgba(168,85,247,0.3)",
-                }}
-              >
-                1.8+
-              </div>
-              <div className="text-white/70 text-base uppercase tracking-wider">
-                Years Experience
-              </div>
-            </motion.div>
+            <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_60px_rgba(168,85,247,0.35)] bg-black">
+              <Image
+                src="/kunal-photo.webp"
+                alt="Kunalsinh Chavda, SEO Engineer"
+                width={520}
+                height={520}
+                priority
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -339,6 +294,28 @@ export default function Hero() {
               <p className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 max-w-3xl">
                 Specializing in SEO strategy, technical optimization, and data-driven digital marketing solutions, with a strong focus on <b>AI, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization)</b> strategies. Helping businesses achieve higher search rankings, enhanced visibility across search and AI-driven platforms, and sustainable organic growth through proven, future-ready methodologies.
               </p>
+
+
+              {/* Stats (desktop; mobile shows them under the heading) */}
+              <div className="hidden lg:grid grid-cols-3 gap-6 mb-8 py-6 border-y border-white/10">
+                {[
+                  { n: "25+", l: "Websites Optimized", c: "rgba(168,85,247,0.6)" },
+                  { n: "20+", l: "Happy Clients", c: "rgba(59,130,246,0.6)" },
+                  { n: "1.8+", l: "Years Experience", c: "rgba(168,85,247,0.6)" },
+                ].map((st) => (
+                  <div key={st.l} className="text-center">
+                    <div
+                      className="text-5xl xl:text-6xl font-black text-white mb-2 leading-none"
+                      style={{ textShadow: `0 0 20px ${st.c}` }}
+                    >
+                      {st.n}
+                    </div>
+                    <div className="text-white/70 text-sm uppercase tracking-wider">
+                      {st.l}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 mt-6">
