@@ -1,24 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink, Globe, Bot } from "lucide-react";
 
-const websites = [
-  { name: "SG Computers", url: "https://www.sgcomputers.com/", industry: "Managed IT & Cybersecurity", region: "Massachusetts, USA" },
-  { name: "aMarketForce", url: "https://www.amarketforce.com/", industry: "B2B Lead Generation", region: "Global" },
-  { name: "InsulinHub", url: "https://insulinhub.com/", industry: "Online Pharmacy / eCommerce", region: "USA" },
-  { name: "Zolon Hardware", url: "https://zolonhardware.com/", industry: "Architectural Hardware & Railings", region: "Manufacturing" },
-  { name: "Synergy West", url: "https://synergywest.com.au/", industry: "NDIS Plan Management", region: "Albany, WA" },
-  { name: "Access Foundation", url: "https://www.accessfoundation.com.au/", industry: "NDIS Disability Services", region: "Perth, WA" },
-  { name: "Admire Care", url: "https://www.admirecare.net.au/", industry: "NDIS Housing & Support", region: "Perth, WA" },
-  { name: "AF Therapy Services", url: "https://www.aftherapyservices.com.au/", industry: "NDIS Allied Health & Therapy", region: "Perth, WA" },
-  { name: "A13 Community Care", url: "https://www.a13communitycare.com.au/", industry: "NDIS Support Coordination", region: "Perth, WA" },
-  { name: "SDA Homes WA", url: "https://sdahomeswa.com.au/", industry: "Specialist Disability Accommodation", region: "Perth, WA" },
-  { name: "Distil Management", url: "https://www.distilmanagement.com.au/", industry: "NDIS Plan Management", region: "Western Australia" },
+const FaviconTile = ({ src, name }: { src: string; name: string }) => (
+  <span className="shrink-0 w-10 h-10 rounded-lg bg-white border border-white/20 flex items-center justify-center p-1.5 overflow-hidden">
+    <Image src={src} alt={`${name} favicon`} width={32} height={32} className="w-full h-full object-contain" />
+  </span>
+);
+
+const websites: { name: string; favicon: string; url: string; industry: string; region: string }[] = [
+  { name: "SG Computers", favicon: "/favicons/sgcomputers.png", url: "https://www.sgcomputers.com/", industry: "Managed IT & Cybersecurity", region: "Massachusetts, USA" },
+  { name: "aMarketForce", favicon: "/favicons/amarketforce.png", url: "https://www.amarketforce.com/", industry: "B2B Lead Generation", region: "Global" },
+  { name: "InsulinHub", favicon: "/favicons/insulinhub.png", url: "https://insulinhub.com/", industry: "Online Pharmacy / eCommerce", region: "USA" },
+  { name: "Zolon Hardware", favicon: "/favicons/zolon.png", url: "https://zolonhardware.com/", industry: "Architectural Hardware & Railings", region: "Manufacturing" },
+  { name: "Synergy West", favicon: "/favicons/synergywest.png", url: "https://synergywest.com.au/", industry: "NDIS Plan Management", region: "Albany, WA" },
+  { name: "Access Foundation", favicon: "/favicons/accessfoundation.png", url: "https://www.accessfoundation.com.au/", industry: "NDIS Disability Services", region: "Perth, WA" },
+  { name: "Admire Care", favicon: "/favicons/admirecare.ico", url: "https://www.admirecare.net.au/", industry: "NDIS Housing & Support", region: "Perth, WA" },
+  { name: "AF Therapy Services", favicon: "/favicons/aftherapy.ico", url: "https://www.aftherapyservices.com.au/", industry: "NDIS Allied Health & Therapy", region: "Perth, WA" },
+  { name: "A13 Community Care", favicon: "/favicons/a13.png", url: "https://www.a13communitycare.com.au/", industry: "NDIS Support Coordination", region: "Perth, WA" },
+  { name: "SDA Homes WA", favicon: "/favicons/sdahomes.webp", url: "https://sdahomeswa.com.au/", industry: "Specialist Disability Accommodation", region: "Perth, WA" },
+  { name: "Distil Management", favicon: "/favicons/distil.png", url: "https://www.distilmanagement.com.au/", industry: "NDIS Plan Management", region: "Western Australia" },
 ];
 
 type AiProject = {
   name: string;
+  favicon?: string;
   url?: string;
   description: string;
   tags: string[];
@@ -27,6 +35,7 @@ type AiProject = {
 const aiProjects: AiProject[] = [
   {
     name: "Project Matrix",
+    favicon: "/favicons/projectmatrix.png",
     url: "https://project-matrix-seven.vercel.app/",
     description:
       "Business and project management dashboard. Google Sheets as the database, Apps Script as the backend and a Vercel front end, with an admin panel.",
@@ -107,9 +116,10 @@ export default function Projects() {
               transition={{ duration: 0.2, delay: (i % 3) * 0.05 }}
               className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-white/30 transition-all duration-200"
             >
-              <div className="flex items-start justify-between gap-3">
-                <h4 className="text-lg font-bold text-white">{site.name}</h4>
-                <ExternalLink className="w-4 h-4 text-white/50 group-hover:text-white shrink-0 mt-1" />
+              <div className="flex items-center gap-3">
+                <FaviconTile src={site.favicon} name={site.name} />
+                <h4 className="text-lg font-bold text-white flex-1">{site.name}</h4>
+                <ExternalLink className="w-4 h-4 text-white/50 group-hover:text-white shrink-0" />
               </div>
               <p className="text-white/80 text-sm mt-2">{site.industry}</p>
               <p className="text-purple-300 text-xs mt-1">{site.region}</p>
@@ -136,7 +146,10 @@ export default function Projects() {
             };
             const body = (
               <>
-                <h4 className="text-lg font-bold text-white mb-2">{p.name}</h4>
+                <div className="flex items-center gap-3 mb-2">
+                  {p.favicon && <FaviconTile src={p.favicon} name={p.name} />}
+                  <h4 className="text-lg font-bold text-white">{p.name}</h4>
+                </div>
                 <p className="text-white/70 text-sm leading-relaxed mb-4">{p.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {p.tags.map((t) => (

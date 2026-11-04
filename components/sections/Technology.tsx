@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Database,
   Smartphone,
@@ -91,36 +92,42 @@ const techCategories = [
 const featuredTech = [
   {
     name: "SEMrush",
+    favicon: "/favicons/semrush.png",
     icon: SiSemrush,
     description: "Keyword & Rank Tracking",
     color: "from-orange-500 to-amber-500",
   },
   {
     name: "Google Search Console",
+    favicon: "/favicons/gsc.png",
     icon: SiGoogle,
     description: "Search Performance",
     color: "from-blue-500 to-cyan-500",
   },
   {
     name: "Google Analytics 4",
+    favicon: "/favicons/ga4.svg",
     icon: SiGoogleanalytics,
     description: "User Behavior",
     color: "from-yellow-400 to-orange-500",
   },
   {
     name: "Ahrefs",
+    favicon: "/favicons/ahrefs.svg",
     icon: FaLink,
     description: "Backlink Analysis",
     color: "from-orange-500 to-rose-500",
   },
   {
     name: "Schema Markup",
+    favicon: "/favicons/schema.png",
     icon: FaCode,
     description: "Structured Data",
     color: "from-emerald-500 to-teal-500",
   },
   {
     name: "Core Web Vitals",
+    favicon: "/favicons/cwv.png",
     icon: SiLighthouse,
     description: "Performance Metrics",
     color: "from-red-500 to-orange-500",
@@ -130,30 +137,35 @@ const featuredTech = [
 const aiTools = [
   {
     name: "ChatGPT",
+    favicon: "/favicons/chatgpt.png",
     icon: SiOpenai,
     description: "Content generation, keyword clustering, and SEO strategy automation",
     color: "from-green-500 to-emerald-600",
   },
   {
     name: "Gemini",
+    favicon: "/favicons/gemini.png",
     icon: SiGooglegemini,
     description: "AI-assisted research, content planning, and SERP intent analysis",
     color: "from-blue-400 to-purple-500",
   },
   {
     name: "Claude",
+    favicon: "/favicons/claude.ico",
     icon: SiAnthropic,
     description: "Long-form content creation and semantic optimizationI",
     color: "from-amber-400 to-orange-500",
   },
   {
     name: "Emergent",
+    favicon: "/favicons/emergent.png",
     icon: Sparkles,
     description: "Landing Pages & AI-powered workflow automation & code generation",
     color: "from-cyan-400 to-blue-500",
   },
   {
     name: "Blackbox AI",
+    favicon: "/favicons/blackbox.ico",
     icon: Box,
     description: "Technical SEO implementation support",
     color: "from-gray-700 to-gray-900",
@@ -261,9 +273,13 @@ export default function Technology() {
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-200 group cursor-default"
                 >
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${tech.color} border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-xl ${"favicon" in tech && tech.favicon ? "bg-white" : `bg-gradient-to-br ${tech.color}`} border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    {"favicon" in tech && tech.favicon ? (
+                      <Image src={tech.favicon} alt={`${tech.name} logo`} width={36} height={36} className="w-9 h-9 object-contain" />
+                    ) : (
+                      <Icon className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <h4 className="text-white font-bold text-sm md:text-base mb-1">
                     {tech.name}
@@ -299,9 +315,13 @@ export default function Technology() {
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-200 group cursor-default"
                 >
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${tech.color} border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-xl ${"favicon" in tech && tech.favicon ? "bg-white" : `bg-gradient-to-br ${tech.color}`} border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    {"favicon" in tech && tech.favicon ? (
+                      <Image src={tech.favicon} alt={`${tech.name} logo`} width={36} height={36} className="w-9 h-9 object-contain" />
+                    ) : (
+                      <Icon className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <h4 className="text-white font-bold text-sm md:text-base mb-1">
                     {tech.name}
