@@ -27,6 +27,10 @@ const Experience = dynamic(() => import("@/components/sections/Experience"), {
   loading: () => <SectionSkeleton />,
 });
 
+const Projects = dynamic(() => import("@/components/sections/Projects"), {
+  loading: () => <SectionSkeleton />,
+});
+
 const Technology = dynamic(() => import("@/components/sections/Technology"), {
   loading: () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -75,6 +79,12 @@ export default function Home() {
       <LazySection>
         <Suspense fallback={<SectionSkeleton />}>
           <Technology />
+        </Suspense>
+      </LazySection>
+      <SectionDivider />
+      <LazySection>
+        <Suspense fallback={<SectionSkeleton />}>
+          <Projects />
         </Suspense>
       </LazySection>
       <SectionDivider />

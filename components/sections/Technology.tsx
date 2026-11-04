@@ -75,6 +75,17 @@ const techCategories = [
       },
     ],
   },
+  {
+    title: "AI & Automation",
+    icon: Sparkles,
+    technologies: [
+      { name: "Claude Code & AI Agents", level: 90, color: "from-purple-500 to-pink-500" },
+      { name: "AEO / GEO Optimization", level: 92, color: "from-blue-500 to-cyan-500" },
+      { name: "Apps Script & Sheets Automation", level: 88, color: "from-green-500 to-emerald-500" },
+      { name: "Next.js & Vercel", level: 80, color: "from-gray-500 to-gray-600" },
+      { name: "AI Video & Voice Pipelines", level: 85, color: "from-orange-500 to-amber-500" },
+    ],
+  },
 ];
 
 const featuredTech = [

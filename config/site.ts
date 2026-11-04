@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Portfolio 2.0",
   title: "Kunalsinh Chavda - SEO Engineer & Digital Marketing Specialist",
   description:
-    "Professional portfolio showcasing 1.5 years of proven SEO expertise, technical optimization, and digital marketing strategies",
+    "Professional portfolio showcasing 1.8 years of proven SEO expertise, technical optimization, and digital marketing strategies",
   url: "https://kunalchavada-seo.com",
   ogImage: "https://kunalchavada-seo.com/og-image.jpg",
   links: {

@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Kunalsinh Chavda | SEO Engineer & Digital Marketing Specialist",
   description:
-    "SEO Engineer with 1.5 years of proven experience - Specializing in organic growth, technical SEO, and digital marketing strategies",
+    "SEO Engineer with 1.8 years of proven experience - Specializing in organic growth, technical SEO, and digital marketing strategies",
   keywords: [
     "SEO Engineer",
     "SEO Specialist",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     apple: "/kunal-avatar.webp",
   },
   openGraph: {
-    title: "Kunalsinh Chavada | SEO Engineer",
+    title: "Kunalsinh Chavda | SEO Engineer",
     description:
-      "SEO Engineer with 1.5 years of proven experience in driving organic growth and improving search engine rankings",
+      "SEO Engineer with 1.8 years of proven experience in driving organic growth and improving search engine rankings",
     type: "website",
   },
   other: {

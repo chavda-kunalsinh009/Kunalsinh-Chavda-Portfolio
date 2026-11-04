@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDown, User, Code, Briefcase, Mail } from "lucide-react";
+import { ChevronDown, User, Code, Briefcase, Mail, FolderOpen } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
   { name: "About", href: "/about", icon: User, hasDropdown: false },
   { name: "Technology", href: "/technology", icon: Code, hasDropdown: false },
   { name: "Experience", href: "/experience", icon: Briefcase, hasDropdown: false },
+  { name: "Projects", href: "/projects", icon: FolderOpen, hasDropdown: false },
   { name: "Contact", href: "/contact", icon: Mail, hasDropdown: false },
 ];
 

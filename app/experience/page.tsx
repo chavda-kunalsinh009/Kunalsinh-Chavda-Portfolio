@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Experience - Kunalsinh Chavda",
-  description: "My professional experience in SEO, technical SEO, and digital marketing with 1.5 years of proven track record",
+  description: "My professional experience in SEO, technical SEO, and digital marketing with 1.8 years of proven track record",
 };
 
 export default function ExperiencePage() {
