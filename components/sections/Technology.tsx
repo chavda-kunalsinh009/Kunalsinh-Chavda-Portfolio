@@ -12,6 +12,25 @@ import {
   Box,
   Monitor,
   Sparkles,
+  Search,
+  Settings2,
+  PenLine,
+  BarChart3,
+  Code2,
+  Bot,
+  Braces,
+  Gauge,
+  Link2,
+  Link as LinkIcon,
+  TrendingUp,
+  MousePointerClick,
+  LayoutDashboard,
+  FileCode2,
+  Network,
+  Table2,
+  Triangle,
+  Clapperboard,
+  Binary,
 } from "lucide-react";
 import { SiSemrush, SiGoogle, SiGoogleanalytics, SiLighthouse, SiOpenai, SiGooglegemini, SiAnthropic } from "react-icons/si";
 import { FaLink, FaCode } from "react-icons/fa6";
@@ -19,64 +38,64 @@ import { FaLink, FaCode } from "react-icons/fa6";
 const techCategories = [
   {
     title: "SEO Tools",
-    icon: Palette,
+    icon: Search,
     technologies: [
-      { name: "SEMrush", description: "Keyword research, competitor gap analysis, site audits and position tracking to find and prioritise ranking opportunities." },
-      { name: "Ahrefs", description: "Backlink profiling, content gap analysis and competitor research to guide link building and topic selection." },
-      { name: "Google Search Console", description: "Tracking queries, indexing and page experience, then fixing coverage errors and low-CTR pages directly from the data." },
-      { name: "Google Analytics 4", description: "Reading organic traffic, engagement and conversion paths to see which pages and keywords actually drive results." },
-      { name: "Screaming Frog", description: "Crawling whole sites to catch broken links, redirect chains, duplicate content, missing tags and indexability issues." },
+      { name: "SEMrush", logo: "/favicons/semrush.png", description: "Keyword research, competitor gap analysis, site audits and position tracking to find and prioritise ranking opportunities." },
+      { name: "Ahrefs", logo: "/favicons/ahrefs.svg", description: "Backlink profiling, content gap analysis and competitor research to guide link building and topic selection." },
+      { name: "Google Search Console", logo: "/favicons/gsc.png", description: "Tracking queries, indexing and page experience, then fixing coverage errors and low-CTR pages directly from the data." },
+      { name: "Google Analytics 4", logo: "/favicons/ga4.svg", description: "Reading organic traffic, engagement and conversion paths to see which pages and keywords actually drive results." },
+      { name: "Screaming Frog", logo: "/favicons/screamingfrog.ico", description: "Crawling whole sites to catch broken links, redirect chains, duplicate content, missing tags and indexability issues." },
     ],
   },
   {
     title: "Technical SEO",
-    icon: Server,
+    icon: Settings2,
     technologies: [
-      { name: "Schema Markup", description: "Writing and validating JSON-LD (Organization, LocalBusiness, FAQ, Article) so search engines and AI understand each page." },
-      { name: "Core Web Vitals", description: "Improving LCP, INP and CLS through image, script and layout fixes using PageSpeed Insights and GTmetrix." },
-      { name: "Mobile-First Indexing", description: "Making sure mobile pages carry the same content, links and speed as desktop, since Google indexes the mobile version." },
-      { name: "Canonical Tags", description: "Setting the right canonical URLs to stop duplicate content and consolidate ranking signals on the preferred page." },
+      { name: "Schema Markup", icon: Braces, description: "Writing and validating JSON-LD (Organization, LocalBusiness, FAQ, Article) so search engines and AI understand each page." },
+      { name: "Core Web Vitals", icon: Gauge, description: "Improving LCP, INP and CLS through image, script and layout fixes using PageSpeed Insights and GTmetrix." },
+      { name: "Mobile-First Indexing", icon: Smartphone, description: "Making sure mobile pages carry the same content, links and speed as desktop, since Google indexes the mobile version." },
+      { name: "Canonical Tags", icon: Link2, description: "Setting the right canonical URLs to stop duplicate content and consolidate ranking signals on the preferred page." },
     ],
   },
   {
     title: "Content & Strategy",
-    icon: Database,
+    icon: PenLine,
     technologies: [
-      { name: "Keyword Research", description: "Mapping keywords to search intent and funnel stage, then grouping them into clusters each page can target." },
-      { name: "Content Optimization", description: "Refining existing pages with better structure, entities, internal links and answer-ready sections to lift rankings and citations." },
-      { name: "Yoast SEO", description: "Managing titles, meta descriptions, sitemaps and on-page checks on WordPress sites with Yoast." },
-      { name: "Link Building", description: "White-hat outreach, citations and brand mentions that build authority without risky shortcuts." },
+      { name: "Keyword Research", icon: Search, description: "Mapping keywords to search intent and funnel stage, then grouping them into clusters each page can target." },
+      { name: "Content Optimization", icon: PenLine, description: "Refining existing pages with better structure, entities, internal links and answer-ready sections to lift rankings and citations." },
+      { name: "Yoast SEO", logo: "/favicons/yoast.ico", description: "Managing titles, meta descriptions, sitemaps and on-page checks on WordPress sites with Yoast." },
+      { name: "Link Building", icon: LinkIcon, description: "White-hat outreach, citations and brand mentions that build authority without risky shortcuts." },
     ],
   },
   {
     title: "Analytics & Tools",
-    icon: Zap,
+    icon: BarChart3,
     technologies: [
-      { name: "Data Analysis", description: "Combining Search Console, GA4 and ranking data to spot trends, declining pages and quick wins." },
-      { name: "Rank Tracker", description: "Monitoring keyword positions and visibility over time to measure the impact of every change." },
-      { name: "Conversion Optimization", description: "Improving page layouts, calls to action and trust signals so organic visitors turn into enquiries." },
-      { name: "Reporting & Dashboards", description: "Building clear monthly reports and dashboards that show clients traffic, rankings and results in plain language." },
+      { name: "Data Analysis", icon: BarChart3, description: "Combining Search Console, GA4 and ranking data to spot trends, declining pages and quick wins." },
+      { name: "Rank Tracker", icon: TrendingUp, description: "Monitoring keyword positions and visibility over time to measure the impact of every change." },
+      { name: "Conversion Optimization", icon: MousePointerClick, description: "Improving page layouts, calls to action and trust signals so organic visitors turn into enquiries." },
+      { name: "Reporting & Dashboards", icon: LayoutDashboard, description: "Building clear monthly reports and dashboards that show clients traffic, rankings and results in plain language." },
     ],
   },
 
   {
     title: "Technical Knowledge",
-    icon: Smartphone,
+    icon: Code2,
     technologies: [
-      { name: "HTML/CSS for SEO", description: "Reading and editing page markup to fix headings, tags, alt text and layout issues without waiting on developers." },
-      { name: "JavaScript Basics", description: "Understanding how JavaScript rendering affects crawling and indexing, and spotting content that search engines can't see." },
-      { name: "Website Architecture", description: "Planning URL structure, navigation and internal linking so both users and crawlers reach key pages quickly." },
+      { name: "HTML/CSS for SEO", icon: Code2, description: "Reading and editing page markup to fix headings, tags, alt text and layout issues without waiting on developers." },
+      { name: "JavaScript Basics", icon: FileCode2, description: "Understanding how JavaScript rendering affects crawling and indexing, and spotting content that search engines can't see." },
+      { name: "Website Architecture", icon: Network, description: "Planning URL structure, navigation and internal linking so both users and crawlers reach key pages quickly." },
     ],
   },
   {
     title: "AI & Automation",
-    icon: Sparkles,
+    icon: Bot,
     technologies: [
-      { name: "Claude Code & AI Agents", description: "Building Claude Code skills and agents that automate SEO audits, AI-visibility checks and reporting." },
-      { name: "AEO / GEO Optimization", description: "Structuring content as clear, citable answers so it appears in featured snippets, voice search and AI responses." },
-      { name: "Apps Script & Sheets Automation", description: "Creating Google Sheets and Apps Script tools, like dashboards and attendance apps, that run without a server." },
-      { name: "Next.js & Vercel", description: "Building and deploying fast, SEO-friendly sites and web apps with Next.js and Vercel." },
-      { name: "AI Video & Voice Pipelines", description: "Producing short explainer videos with scripted voice-overs, animated visuals and captions through automated pipelines." },
+      { name: "Claude Code & AI Agents", icon: Bot, description: "Building Claude Code skills and agents that automate SEO audits, AI-visibility checks and reporting." },
+      { name: "AEO / GEO Optimization", icon: Sparkles, description: "Structuring content as clear, citable answers so it appears in featured snippets, voice search and AI responses." },
+      { name: "Apps Script & Sheets Automation", icon: Table2, description: "Creating Google Sheets and Apps Script tools, like dashboards and attendance apps, that run without a server." },
+      { name: "Next.js & Vercel", icon: Triangle, description: "Building and deploying fast, SEO-friendly sites and web apps with Next.js and Vercel." },
+      { name: "AI Video & Voice Pipelines", icon: Clapperboard, description: "Producing short explainer videos with scripted voice-overs, animated visuals and captions through automated pipelines." },
     ],
   },
 ];
@@ -422,12 +441,27 @@ export default function Technology() {
                         }}
                         className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-200"
                       >
-                        <h4 className="text-white font-semibold mb-1.5">
-                          {tech.name}
-                        </h4>
-                        <p className="text-white/70 text-sm leading-relaxed">
-                          {tech.description}
-                        </p>
+                        <div className="flex items-start gap-3">
+                          {"logo" in tech && tech.logo ? (
+                            <span className="shrink-0 w-10 h-10 rounded-lg bg-white border border-white/20 flex items-center justify-center p-1.5 overflow-hidden">
+                              <Image src={tech.logo} alt={`${tech.name} logo`} width={32} height={32} className="w-full h-full object-contain" />
+                            </span>
+                          ) : (
+                            <span className="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-500/30 border border-white/10 flex items-center justify-center">
+                              {"icon" in tech && tech.icon ? (
+                                <tech.icon className="w-5 h-5 text-white" />
+                              ) : null}
+                            </span>
+                          )}
+                          <div>
+                            <h4 className="text-white font-semibold mb-1.5">
+                              {tech.name}
+                            </h4>
+                            <p className="text-white/70 text-sm leading-relaxed">
+                              {tech.description}
+                            </p>
+                          </div>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
