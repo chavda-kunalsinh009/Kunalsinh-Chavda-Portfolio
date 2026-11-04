@@ -139,8 +139,6 @@ export default function Hero() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white leading-[0.95] tracking-tight mb-4 sm:mb-6"
               style={{
                 fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-                textShadow:
-                  "0 0 30px rgba(168,85,247,0.5), 0 0 60px rgba(59,130,246,0.3)",
                 fontWeight: 900,
                 letterSpacing: "-0.03em",
               }}
@@ -149,8 +147,6 @@ export default function Hero() {
               <br />
               <span className="relative">
                 CHAVDA
-                {/* Neon gradient glow effect */}
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-400/30 via-cyan-400/30 to-blue-400/30 blur-2xl"></span>
               </span>
             </motion.h1>
 
@@ -251,7 +247,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0.2 }}
-            className="w-full max-w-[19rem] sm:max-w-sm lg:w-[21rem] xl:w-[24rem] 2xl:w-[26rem] lg:max-w-none mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0 shrink-0"
+            className="w-full max-w-[19rem] sm:max-w-sm lg:w-[23rem] xl:w-[26rem] 2xl:w-[28rem] lg:max-w-none mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0 shrink-0"
           >
             <div className="relative">
             <div className="absolute inset-x-6 top-10 bottom-0 rounded-full bg-gradient-to-br from-purple-500/25 to-blue-500/25 blur-3xl pointer-events-none"></div>
