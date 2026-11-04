@@ -31,9 +31,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kunalsinh Chavada" }],
   icons: {
-    icon: "/kunal-photo.webp",
-    shortcut: "/kunal-photo.webp",
-    apple: "/kunal-photo.webp",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Kunalsinh Chavda | SEO Engineer",

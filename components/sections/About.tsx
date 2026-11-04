@@ -139,9 +139,9 @@ export default function About() {
 
               <div className="relative z-10">
                 <div className="flex items-center gap-5 mb-6">
-                  <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-xl">
+                  <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-xl bg-gradient-to-br from-purple-500/40 to-blue-500/40">
                     <Image
-                      src="/kunal-photo.webp"
+                      src="/kunal-cutout.webp"
                       alt="Kunalsinh Chavda, SEO Engineer"
                       width={288}
                       height={288}

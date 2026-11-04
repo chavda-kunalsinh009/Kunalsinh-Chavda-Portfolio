@@ -67,7 +67,7 @@ export default function Footer() {
                   <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/30 border-2 border-white/20 backdrop-blur-sm p-0.5 overflow-hidden">
                     <div className="w-full h-full rounded-full overflow-hidden bg-black">
                       <Image
-                        src="/kunal-photo.webp"
+                        src="/icon-512.png"
                         alt="Kunalsinh Chavda"
                         width={128}
                         height={128}
