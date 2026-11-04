@@ -167,3 +167,65 @@ body {
   }
 }
 
+
+/* ===== Light theme (toggled via html.light) ===== */
+html.light {
+  background: #f6f7fb;
+  color-scheme: light;
+}
+
+html.light body {
+  color: #0f172a;
+  background: #f6f7fb;
+}
+
+/* solid and translucent black backgrounds */
+html.light .bg-black,
+html.light [class*="bg-black/"] {
+  background-color: #f6f7fb;
+}
+
+/* gradient stops that fade to black */
+html.light [class*="from-black"] { --tw-gradient-from: #f6f7fb; }
+html.light [class*="via-black"] { --tw-gradient-via: #f6f7fb; }
+html.light [class*="to-black"] { --tw-gradient-to: #f6f7fb; }
+html.light [class*="from-gray-9"] { --tw-gradient-from: rgba(255, 255, 255, 0.92); }
+html.light [class*="via-gray-9"] { --tw-gradient-via: rgba(255, 255, 255, 0.92); }
+
+/* glass cards and chips */
+html.light [class*="bg-white/"] {
+  background-color: rgba(15, 23, 42, 0.04);
+}
+html.light [class*="bg-white/10"] {
+  background-color: rgba(15, 23, 42, 0.07);
+}
+html.light [class*="hover:bg-white/"]:hover {
+  background-color: rgba(15, 23, 42, 0.08);
+}
+html.light [class*="border-white/"],
+html.light [class*="border-white/"]:hover {
+  border-color: rgba(15, 23, 42, 0.14);
+}
+html.light .glass-morphism {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+/* text */
+html.light .text-white,
+html.light [class*="text-white/"],
+html.light .text-gray-300 {
+  color: #0f172a;
+}
+
+/* nav shadow */
+html.light header nav {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* keep white text on solid-colour gradient buttons / icon tiles */
+html.light [class*="bg-gradient-to-"][class*="from-"]:not([class*="from-black"]):not([class*="from-gray"]):not([class*="from-white"]):not([class*="/"]),
+html.light [class*="bg-gradient-to-"][class*="from-"]:not([class*="from-black"]):not([class*="from-gray"]):not([class*="from-white"]):not([class*="/"]) * {
+  color: #ffffff;
+}

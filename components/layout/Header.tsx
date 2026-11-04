@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDown, User, Code, Briefcase, Mail, FolderOpen } from "lucide-react";
+import { ChevronDown, User, Code, Briefcase, Mail, FolderOpen, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
@@ -18,6 +18,7 @@ export default function Header() {
   const [showBottomNav, setShowBottomNav] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLight, setIsLight] = useState(false);
   const lastScrollY = useRef(0);
   const router = useRouter();
   const pathname = usePathname();
@@ -25,6 +26,7 @@ export default function Header() {
   useEffect(() => {
     // Mark component as mounted to avoid hydration mismatch
     setIsMounted(true);
+    setIsLight(document.documentElement.classList.contains("light"));
 
     // Force dark theme for design
     if (typeof document !== "undefined") {
@@ -83,6 +85,15 @@ export default function Header() {
       return () => window.removeEventListener("scroll", handleScroll);
     }
   }, [pathname]);
+
+  const toggleTheme = () => {
+    const next = !isLight;
+    setIsLight(next);
+    document.documentElement.classList.toggle("light", next);
+    try {
+      localStorage.setItem("theme", next ? "light" : "dark");
+    } catch (e) {}
+  };
 
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
@@ -149,6 +160,16 @@ export default function Header() {
                   );
                 })}
               </div>
+
+              {/* Theme toggle */}
+              <button
+                onClick={toggleTheme}
+                aria-label={isLight ? "Switch to dark theme" : "Switch to light theme"}
+                title={isLight ? "Dark theme" : "Light theme"}
+                className="ml-auto xl:ml-2 mr-1 xl:mr-0 z-10 p-2 hover:bg-white/10 rounded-lg transition-colors"
+              >
+                {isLight ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+              </button>
 
               {/* Mobile Menu Button */}
               <button
