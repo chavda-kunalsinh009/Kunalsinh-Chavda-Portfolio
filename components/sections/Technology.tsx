@@ -21,45 +21,41 @@ const techCategories = [
     title: "SEO Tools",
     icon: Palette,
     technologies: [
-      { name: "SEMrush", level: 95, color: "from-purple-500 to-blue-500" },
-      { name: "Ahrefs", level: 93, color: "from-blue-500 to-cyan-500" },
-      { name: "Google Search Console", level: 98, color: "from-blue-500 to-indigo-500" },
-      { name: "Google Analytics 4", level: 95, color: "from-cyan-500 to-teal-500" },
-      {
-        name: "Screaming Frog",
-        level: 90,
-        color: "from-pink-500 to-purple-500",
-      },
+      { name: "SEMrush", description: "Keyword research, competitor gap analysis, site audits and position tracking to find and prioritise ranking opportunities." },
+      { name: "Ahrefs", description: "Backlink profiling, content gap analysis and competitor research to guide link building and topic selection." },
+      { name: "Google Search Console", description: "Tracking queries, indexing and page experience, then fixing coverage errors and low-CTR pages directly from the data." },
+      { name: "Google Analytics 4", description: "Reading organic traffic, engagement and conversion paths to see which pages and keywords actually drive results." },
+      { name: "Screaming Frog", description: "Crawling whole sites to catch broken links, redirect chains, duplicate content, missing tags and indexability issues." },
     ],
   },
   {
     title: "Technical SEO",
     icon: Server,
     technologies: [
-      { name: "Schema Markup", level: 92, color: "from-green-500 to-emerald-500" },
-      { name: "Core Web Vitals", level: 90, color: "from-red-500 to-pink-500" },
-      { name: "Mobile-First Indexing", level: 95, color: "from-gray-500 to-gray-600" },
-      { name: "Canonical Tags", level: 95, color: "from-blue-500 to-cyan-500" },
+      { name: "Schema Markup", description: "Writing and validating JSON-LD (Organization, LocalBusiness, FAQ, Article) so search engines and AI understand each page." },
+      { name: "Core Web Vitals", description: "Improving LCP, INP and CLS through image, script and layout fixes using PageSpeed Insights and GTmetrix." },
+      { name: "Mobile-First Indexing", description: "Making sure mobile pages carry the same content, links and speed as desktop, since Google indexes the mobile version." },
+      { name: "Canonical Tags", description: "Setting the right canonical URLs to stop duplicate content and consolidate ranking signals on the preferred page." },
     ],
   },
   {
     title: "Content & Strategy",
     icon: Database,
     technologies: [
-      { name: "Keyword Research", level: 94, color: "from-green-500 to-emerald-500" },
-      { name: "Content Optimization", level: 92, color: "from-orange-500 to-amber-500" },
-      { name: "Yoast SEO", level: 90, color: "from-yellow-500 to-orange-500" },
-      { name: "Link Building", level: 88, color: "from-purple-500 to-pink-500" },
+      { name: "Keyword Research", description: "Mapping keywords to search intent and funnel stage, then grouping them into clusters each page can target." },
+      { name: "Content Optimization", description: "Refining existing pages with better structure, entities, internal links and answer-ready sections to lift rankings and citations." },
+      { name: "Yoast SEO", description: "Managing titles, meta descriptions, sitemaps and on-page checks on WordPress sites with Yoast." },
+      { name: "Link Building", description: "White-hat outreach, citations and brand mentions that build authority without risky shortcuts." },
     ],
   },
   {
     title: "Analytics & Tools",
     icon: Zap,
     technologies: [
-      { name: "Data Analysis", level: 93, color: "from-orange-500 to-red-500" },
-      { name: "Rank Tracker", level: 91, color: "from-blue-500 to-cyan-500" },
-      { name: "Conversion Optimization", level: 88, color: "from-purple-500 to-pink-500" },
-      { name: "Reporting & Dashboards", level: 90, color: "from-yellow-500 to-orange-500" },
+      { name: "Data Analysis", description: "Combining Search Console, GA4 and ranking data to spot trends, declining pages and quick wins." },
+      { name: "Rank Tracker", description: "Monitoring keyword positions and visibility over time to measure the impact of every change." },
+      { name: "Conversion Optimization", description: "Improving page layouts, calls to action and trust signals so organic visitors turn into enquiries." },
+      { name: "Reporting & Dashboards", description: "Building clear monthly reports and dashboards that show clients traffic, rankings and results in plain language." },
     ],
   },
 
@@ -67,24 +63,20 @@ const techCategories = [
     title: "Technical Knowledge",
     icon: Smartphone,
     technologies: [
-      { name: "HTML/CSS for SEO", level: 92, color: "from-purple-500 to-pink-500" },
-      { name: "JavaScript Basics", level: 85, color: "from-pink-500 to-rose-500" },
-      {
-        name: "Website Architecture",
-        level: 93,
-        color: "from-cyan-500 to-blue-500",
-      },
+      { name: "HTML/CSS for SEO", description: "Reading and editing page markup to fix headings, tags, alt text and layout issues without waiting on developers." },
+      { name: "JavaScript Basics", description: "Understanding how JavaScript rendering affects crawling and indexing, and spotting content that search engines can't see." },
+      { name: "Website Architecture", description: "Planning URL structure, navigation and internal linking so both users and crawlers reach key pages quickly." },
     ],
   },
   {
     title: "AI & Automation",
     icon: Sparkles,
     technologies: [
-      { name: "Claude Code & AI Agents", level: 90, color: "from-purple-500 to-pink-500" },
-      { name: "AEO / GEO Optimization", level: 92, color: "from-blue-500 to-cyan-500" },
-      { name: "Apps Script & Sheets Automation", level: 88, color: "from-green-500 to-emerald-500" },
-      { name: "Next.js & Vercel", level: 80, color: "from-gray-500 to-gray-600" },
-      { name: "AI Video & Voice Pipelines", level: 85, color: "from-orange-500 to-amber-500" },
+      { name: "Claude Code & AI Agents", description: "Building Claude Code skills and agents that automate SEO audits, AI-visibility checks and reporting." },
+      { name: "AEO / GEO Optimization", description: "Structuring content as clear, citable answers so it appears in featured snippets, voice search and AI responses." },
+      { name: "Apps Script & Sheets Automation", description: "Creating Google Sheets and Apps Script tools, like dashboards and attendance apps, that run without a server." },
+      { name: "Next.js & Vercel", description: "Building and deploying fast, SEO-friendly sites and web apps with Next.js and Vercel." },
+      { name: "AI Video & Voice Pipelines", description: "Producing short explainer videos with scripted voice-overs, animated visuals and captions through automated pipelines." },
     ],
   },
 ];
@@ -374,31 +366,12 @@ export default function Technology() {
                         }}
                         className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-200"
                       >
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-white font-semibold">
-                            {tech.name}
-                          </span>
-                          <span className="text-white/60 text-sm">
-                            {tech.level}%
-                          </span>
-                        </div>
-                        <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${tech.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{
-                              duration: 0.5,
-                              delay:
-                                categoryIndex * 0.05 + techIndex * 0.05 + 0.15,
-                              ease: "easeOut",
-                            }}
-                            className={`h-full bg-gradient-to-r ${tech.color} rounded-full`}
-                            style={{
-                              boxShadow: `0 0 10px rgba(168, 85, 247, 0.5)`,
-                            }}
-                          />
-                        </div>
+                        <h4 className="text-white font-semibold mb-1.5">
+                          {tech.name}
+                        </h4>
+                        <p className="text-white/70 text-sm leading-relaxed">
+                          {tech.description}
+                        </p>
                       </motion.div>
                     ))}
                   </div>
