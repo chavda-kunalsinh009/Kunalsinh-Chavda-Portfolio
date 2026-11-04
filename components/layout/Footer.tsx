@@ -18,7 +18,7 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { name: "Email", icon: Mail, href: "mailto:kunalsinh009@gmail.com" },
+  { name: "Email", icon: Mail, href: "mailto:kunalsinhchavda2001@gmail.com" },
   {
     name: "LinkedIn",
     icon: Linkedin,

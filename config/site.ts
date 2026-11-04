@@ -9,6 +9,6 @@ export const siteConfig = {
     github: "https://github.com/kunalchavada",
     linkedin: "https://linkedin.com/in/kunal-chavada-seo",
     twitter: "https://twitter.com/kunal_chavada_seo",
-    email: "mailto:kunal.chavada.seo@gmail.com",
+    email: "mailto:kunalsinhchavda2001@gmail.com",
   },
 };
