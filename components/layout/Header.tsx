@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDown, User, Code, Briefcase, Mail, FolderOpen, Sun, Moon } from "lucide-react";
+import { ChevronDown, User, Code, Briefcase, Mail, FolderOpen, Award, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
@@ -10,6 +10,7 @@ const navItems = [
   { name: "Technology", href: "/technology", icon: Code, hasDropdown: false },
   { name: "Experience", href: "/experience", icon: Briefcase, hasDropdown: false },
   { name: "Projects", href: "/projects", icon: FolderOpen, hasDropdown: false },
+  { name: "Certificates", href: "/certifications", icon: Award, hasDropdown: false },
   { name: "Contact", href: "/contact", icon: Mail, hasDropdown: false },
 ];
 
