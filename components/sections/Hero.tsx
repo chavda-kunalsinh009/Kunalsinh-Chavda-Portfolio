@@ -293,7 +293,7 @@ export default function Hero() {
 
               {/* Intro Paragraph */}
               <p className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 max-w-3xl">
-                Specializing in SEO strategy, technical optimization, and data-driven digital marketing solutions, with a strong focus on <b>AI, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization)</b> strategies. Helping businesses achieve higher search rankings, enhanced visibility across search and AI-driven platforms, and sustainable organic growth through proven, future-ready methodologies.
+                SEO Engineer focused on technical SEO, content strategy and data-driven digital marketing, with a specialty in AI search: <b>AEO, GEO and AIO</b>. I help businesses rank higher on Google, get cited in AI answers, and build organic growth that lasts.
               </p>
 
 

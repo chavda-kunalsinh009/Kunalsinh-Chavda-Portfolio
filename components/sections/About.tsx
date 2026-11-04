@@ -216,13 +216,22 @@ export default function About() {
                 </div>
                 <div className="space-y-4 text-white/80 leading-relaxed">
                   <p>
-                    I'm an experienced SEO Engineer with 2.6 years of proven expertise in driving organic growth and increasing online visibility. I combine technical SEO knowledge with strategic optimization, along with <b>AI-driven SEO</b>, <b>AEO (Answer Engine Optimization)</b>, and <b>GEO (Generative Engine Optimization)</b> strategies to help businesses achieve higher search rankings and increased qualified traffic.
+                    I&apos;m an SEO Engineer with 2.6 years of experience helping 28+ clients grow organic traffic and visibility across 30+ websites. I pair technical SEO and on-page optimization with <b>AEO, GEO, AIO and SXO</b>, so brands rank on Google and also get cited in AI answers from ChatGPT, Gemini and Google AI Overviews.
                   </p>
                   <p>
-                    My approach leverages data-driven insights, AI-powered tools, and industry best practices, ensuring that every optimization effort directly contributes to measurable business results. I stay updated with the latest algorithm changes, evolving AI search trends, and emerging discovery platforms to keep strategies ahead of the curve.
+                    My work starts with data. I use Google Search Console, GA4, SEMrush, Ahrefs and Screaming Frog to find what is holding a site back, then fix it in order of impact: crawlability and speed, structured data, intent-matched content and trusted links.
                   </p>
                   <p>
-                    I specialize in comprehensive SEO audits, technical optimization, on-page SEO, content strategy, link building, and <b>AI-focused content optimization for search and generative engines</b>, using tools like SEMrush, Ahrefs, and Google Search Console, while maintaining white-hat and best practices.
+                    I also build <b>AI-assisted workflows</b> with Claude Code and automation to speed up audits, SERP analysis and reporting, and I keep up with algorithm updates and AI search changes. Every strategy is white-hat and tied to measurable business results.
+                  </p>
+                  <p>
+                    I&apos;ve worked with clients in Australia and the USA across very different industries, including <b>NDIS and disability services</b>, managed IT and cybersecurity, B2B lead generation, online pharmacy eCommerce and architectural hardware. That range has taught me that good SEO starts with understanding the customer, their search intent and how they decide, not with a template.
+                  </p>
+                  <p>
+                    I keep learning alongside client work, with certifications from <b>HubSpot Academy</b>, <b>BrandVeda</b> (SEO, PPC and Social Media Marketing) and <b>Anthropic</b> (AI Fluency, Claude and Claude Code).
+                  </p>
+                  <p>
+                    Outside client work I build practical tools, such as Project Matrix (a Google Sheets business dashboard), an attendance app and an AI sales-email agent, and I run <b>AI UNLOCKED</b>, a Hinglish series that explains AI in simple words. I enjoy turning ideas into working systems, and that shapes how I approach every SEO problem: find the cause, test a fix, measure the result.
                   </p>
                 </div>
               </div>
