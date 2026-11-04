@@ -21,9 +21,9 @@ const skills = [
 ];
 
 const achievements = [
-  { icon: Award, number: "25+", label: "Websites Optimized" },
-  { icon: Users, number: "20+", label: "Happy Clients" },
-  { icon: Zap, number: "1.8+", label: "Years Experience" },
+  { icon: Award, number: "30+", label: "Websites Optimized Globally" },
+  { icon: Users, number: "28+", label: "Happy Clients" },
+  { icon: Zap, number: "2.6+", label: "Years Experience" },
   { icon: Globe, number: "100%", label: "Client Satisfaction" },
 ];
 
@@ -154,7 +154,7 @@ export default function About() {
                 </div>
                 <div className="space-y-4 text-white/80 leading-relaxed">
                   <p>
-                    I'm an experienced SEO Engineer with 2 years of proven expertise in driving organic growth and increasing online visibility. I combine technical SEO knowledge with strategic optimization, along with <b>AI-driven SEO</b>, <b>AEO (Answer Engine Optimization)</b>, and <b>GEO (Generative Engine Optimization)</b> strategies to help businesses achieve higher search rankings and increased qualified traffic.
+                    I'm an experienced SEO Engineer with 2.6 years of proven expertise in driving organic growth and increasing online visibility. I combine technical SEO knowledge with strategic optimization, along with <b>AI-driven SEO</b>, <b>AEO (Answer Engine Optimization)</b>, and <b>GEO (Generative Engine Optimization)</b> strategies to help businesses achieve higher search rankings and increased qualified traffic.
                   </p>
                   <p>
                     My approach leverages data-driven insights, AI-powered tools, and industry best practices, ensuring that every optimization effort directly contributes to measurable business results. I stay updated with the latest algorithm changes, evolving AI search trends, and emerging discovery platforms to keep strategies ahead of the curve.

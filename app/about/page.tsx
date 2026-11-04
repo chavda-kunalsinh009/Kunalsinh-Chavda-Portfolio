@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "About Me - Kunalsinh Chavda",
-  description: "Learn more about Kunalsinh Chavda, an SEO Engineer with 1.5 years of proven experience",
+  description: "Learn more about Kunalsinh Chavda, an SEO Engineer with 2.6 years of proven experience",
 };
 
 export default function AboutPage() {

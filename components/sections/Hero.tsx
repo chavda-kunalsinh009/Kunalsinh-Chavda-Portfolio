@@ -173,7 +173,7 @@ export default function Hero() {
               transition={{ duration: 0.2, delay: 0.15 }}
               className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl leading-relaxed"
             >
-              Driving organic growth and boosting online visibility with <b>1.8 years</b> of
+              Driving organic growth and boosting online visibility with <b>2.6 years</b> of
               proven SEO expertise, technical optimization, and data-driven strategies.
             </motion.p>
 
@@ -198,10 +198,10 @@ export default function Hero() {
                         "0 0 20px rgba(168,85,247,0.6), 0 0 40px rgba(168,85,247,0.3)",
                     }}
                   >
-                    25+
+                    30+
                   </div>
                   <div className="text-white/70 text-[10px] sm:text-xs md:text-sm uppercase tracking-wider leading-tight">
-                    Websites Optimized
+                    Websites Optimized Globally
                   </div>
                 </motion.div>
                 <motion.div
@@ -217,7 +217,7 @@ export default function Hero() {
                         "0 0 20px rgba(59,130,246,0.6), 0 0 40px rgba(59,130,246,0.3)",
                     }}
                   >
-                    20+
+                    28+
                   </div>
                   <div className="text-white/70 text-[10px] sm:text-xs md:text-sm uppercase tracking-wider leading-tight">
                     Happy Clients
@@ -236,7 +236,7 @@ export default function Hero() {
                         "0 0 20px rgba(168,85,247,0.6), 0 0 40px rgba(168,85,247,0.3)",
                     }}
                   >
-                    1.8+
+                    2.6+
                   </div>
                   <div className="text-white/70 text-[10px] sm:text-xs md:text-sm uppercase tracking-wider leading-tight">
                     Years Experience
@@ -304,9 +304,9 @@ export default function Hero() {
               {/* Stats (desktop; mobile shows them under the heading) */}
               <div className="hidden lg:grid grid-cols-3 gap-6 mb-8 py-6 border-y border-white/10">
                 {[
-                  { n: "25+", l: "Websites Optimized", c: "rgba(168,85,247,0.6)" },
-                  { n: "20+", l: "Happy Clients", c: "rgba(59,130,246,0.6)" },
-                  { n: "1.8+", l: "Years Experience", c: "rgba(168,85,247,0.6)" },
+                  { n: "30+", l: "Websites Optimized Globally", c: "rgba(168,85,247,0.6)" },
+                  { n: "28+", l: "Happy Clients", c: "rgba(59,130,246,0.6)" },
+                  { n: "2.6+", l: "Years Experience", c: "rgba(168,85,247,0.6)" },
                 ].map((st) => (
                   <div key={st.l} className="text-center">
                     <div
