@@ -87,6 +87,8 @@ const marketingCerts: Cert[] = [
     title: "Digital Marketing Certification",
     issuer: "HubSpot Academy",
     logo: "/favicons/hubspot.png",
+    image: "/certificates/hubspot-digital-marketing.webp",
+    date: "Valid Sep 2026 - Oct 2028",
     description:
       "Ten-module certification covering digital marketing fundamentals, content marketing and SEO, ads and social media, email, website strategy, consumer psychology, AI in digital marketing and ethical marketing.",
     verifyUrl:
