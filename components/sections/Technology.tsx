@@ -124,6 +124,34 @@ const featuredTech = [
     description: "Performance Metrics",
     color: "from-red-500 to-orange-500",
   },
+  {
+    name: "Screaming Frog",
+    favicon: "/favicons/screamingfrog.ico",
+    icon: FaCode,
+    description: "Technical Site Crawling",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    name: "Yoast SEO",
+    favicon: "/favicons/yoast.ico",
+    icon: FaCode,
+    description: "WordPress On-Page SEO",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "PageSpeed Insights",
+    favicon: "/favicons/pagespeed.png",
+    icon: SiLighthouse,
+    description: "Speed & Performance Audits",
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    name: "Bing Webmaster Tools",
+    favicon: "/favicons/bing.png",
+    icon: FaCode,
+    description: "Bing Indexing & Search Data",
+    color: "from-cyan-500 to-blue-500",
+  },
 ];
 
 const aiTools = [
@@ -167,6 +195,34 @@ const aiTools = [
     icon: Monitor,
     description: "AI-assisted analysis and productivity enhancement",
     color: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "Claude Code",
+    favicon: "/favicons/claude.ico",
+    icon: SiAnthropic,
+    description: "Agentic coding and SEO workflow automation from the terminal",
+    color: "from-amber-400 to-orange-500",
+  },
+  {
+    name: "Claude Cowork",
+    favicon: "/favicons/claude.ico",
+    icon: SiAnthropic,
+    description: "Agentic desktop assistant for research, documents and reporting",
+    color: "from-amber-400 to-orange-500",
+  },
+  {
+    name: "ElevenLabs",
+    favicon: "/favicons/elevenlabs.ico",
+    icon: Sparkles,
+    description: "AI voice-overs for explainer videos and content",
+    color: "from-gray-700 to-gray-900",
+  },
+  {
+    name: "HyperFrames",
+    favicon: "/favicons/heygen.ico",
+    icon: Sparkles,
+    description: "Code-driven video creation for short explainer content",
+    color: "from-blue-400 to-purple-500",
   },
 ];
 
