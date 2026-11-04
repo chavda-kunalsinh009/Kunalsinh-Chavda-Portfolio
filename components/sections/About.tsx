@@ -11,13 +11,75 @@ import {
   Users,
   Zap,
   Globe,
+  MessageSquareText,
+  Sparkles,
+  Bot,
+  MousePointerClick,
+  Network,
+  Cpu,
 } from "lucide-react";
 
 const skills = [
-  { name: "On-Page SEO", icon: Code, level: 92 },
-  { name: "Technical SEO", icon: Rocket, level: 88 },
-  { name: "Content Marketing", icon: Palette, level: 85 },
-  { name: "Link Building", icon: Target, level: 90 },
+  {
+    name: "On-Page SEO",
+    icon: Code,
+    description:
+      "Optimising titles, headings, content and internal links so every page matches what people actually search for.",
+  },
+  {
+    name: "Technical SEO",
+    icon: Rocket,
+    description:
+      "Fixing crawlability, indexing, site speed and Core Web Vitals issues that quietly hold rankings back.",
+  },
+  {
+    name: "AEO - Answer Engine Optimization",
+    icon: MessageSquareText,
+    description:
+      "Writing clear, direct answers and FAQ-style content that wins featured snippets, voice search and AI answers.",
+  },
+  {
+    name: "GEO - Generative Engine Optimization",
+    icon: Sparkles,
+    description:
+      "Making brands easy for ChatGPT, Gemini and Perplexity to understand and cite, through entities, structure and trusted sources.",
+  },
+  {
+    name: "AIO - AI Overviews Optimization",
+    icon: Bot,
+    description:
+      "Shaping pages with concise answer blocks and strong E-E-A-T signals to earn a place in Google AI Overviews.",
+  },
+  {
+    name: "SXO - Search Experience Optimization",
+    icon: MousePointerClick,
+    description:
+      "Matching page type, intent and user experience to the search results so visitors stay and convert, not just click.",
+  },
+  {
+    name: "Entity & Schema SEO",
+    icon: Network,
+    description:
+      "Adding JSON-LD structured data and consistent brand signals so search engines and AI know exactly who you are.",
+  },
+  {
+    name: "Content Strategy",
+    icon: Palette,
+    description:
+      "Keyword research, topic clusters and content briefs built to rank on Google and get quoted by AI.",
+  },
+  {
+    name: "Link Building",
+    icon: Target,
+    description:
+      "White-hat outreach, citations and brand mentions that build real authority without risky shortcuts.",
+  },
+  {
+    name: "AI-Driven SEO Workflows",
+    icon: Cpu,
+    description:
+      "Using AI tools and Claude-based workflows to speed up audits, SERP analysis, content optimisation and reporting.",
+  },
 ];
 
 const achievements = [
@@ -183,39 +245,30 @@ export default function About() {
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
                   Core Skills
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-5">
                   {skills.map((skill, index) => {
                     const Icon = skill.icon;
                     return (
-                      <div key={skill.name} className="space-y-2">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-3">
-                            <Icon className="w-5 h-5 text-white/70" />
-                            <span className="text-white font-medium">
-                              {skill.name}
-                            </span>
-                          </div>
-                          <span className="text-white/60 text-sm">
-                            {skill.level}%
-                          </span>
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.2, delay: index * 0.03 }}
+                        className="flex gap-4"
+                      >
+                        <span className="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-500/30 border border-white/10 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-white" />
+                        </span>
+                        <div>
+                          <h4 className="text-white font-semibold leading-snug">
+                            {skill.name}
+                          </h4>
+                          <p className="text-white/70 text-sm leading-relaxed mt-1">
+                            {skill.description}
+                          </p>
                         </div>
-                        <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{
-                              duration: 0.3,
-                              delay: 0.3 + index * 0.05,
-                              ease: "easeOut",
-                            }}
-                            className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
-                            style={{
-                              boxShadow: "0 0 10px rgba(168, 85, 247, 0.5)",
-                            }}
-                          />
-                        </div>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>
